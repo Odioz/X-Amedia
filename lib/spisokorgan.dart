@@ -6,6 +6,7 @@ class SpisokOrgan {
   String adres;
   String logo;
   String telf;
+  String call;
   String email;
   String wwwad;
   String insta;
@@ -20,6 +21,7 @@ class SpisokOrgan {
       this.adres,
       this.logo,
       this.telf,
+      this.call,
       this.email,
       this.wwwad,
       this.insta,

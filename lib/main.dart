@@ -106,6 +106,7 @@ class SpisokOrg extends StatelessWidget {
         adres:
             '678388,  Республика Саха (Якутия), Намский улус, село Аппаны, улица Лена, 22',
         telf: '8 (41162) 2-31-42, 2-30-42, 2-34-04',
+        call: '84116223142',
         email: 'hatyn-aryy24@mail.ru',
         wwwad: 'https://hatynary.sakha.gov.ru/',
         insta: 'https://www.instagram.com/hatynaryy_sonunnara/',
@@ -121,6 +122,7 @@ class SpisokOrg extends StatelessWidget {
         adres:
             '678388, Республика Саха(Якутия), Намский улус, село Аппаны, улица Д.Сивцева, 4',
         telf: '8 (41162) 2-34-35',
+        call: '84116223435',
         email: 'appany.dshi@mail.ru',
         wwwad: '',
         insta: 'https://www.instagram.com/p/CLTbu_ZLROU/?igshid=1jonwd4bjyuxq',
@@ -136,6 +138,7 @@ class SpisokOrg extends StatelessWidget {
         adres:
             '678388, Республика Саха(Якутия), Намский улус, село Кысыл Деревня, улица им. М.Решетниковой, 10',
         telf: '8 (41162) 2-30-95',
+        call: '84116223095',
         email: '',
         wwwad: 'http://saydyy.ucoz.net/',
         insta: '',
@@ -151,6 +154,7 @@ class SpisokOrg extends StatelessWidget {
         adres:
             '678388,  Республика Саха (Якутия), Намский улус, село Аппаны, улица Лена, 29',
         telf: '8 (41162) 2-31-34',
+        call: '84116223134',
         email: '',
         wwwad: 'https://choron.ucoz.net/',
         insta: 'https://www.instagram.com/mbu_snt_choroon/',
@@ -167,6 +171,7 @@ class SpisokOrg extends StatelessWidget {
         adres:
             '678388, Республика Саха (Якутия), Намский улус, село  Графский Берег, улица Центральная, 18',
         telf: '8 (41162) 2-30-97',
+        call: '84116223097',
         email: '',
         wwwad:
             'https://hatynary.sakha.gov.ru/mbu-tsd-samorodok-s-grafskij-bereg',
@@ -183,6 +188,7 @@ class SpisokOrg extends StatelessWidget {
         adres:
             '678388, Республика Саха (Якутия), Намский улус, село  Графский Берег, улица Пионерская, 2',
         telf: '8 (41162) 2-33-81',
+        call: '84116223381',
         email: 'z.zatons@yandex.ru',
         wwwad: 'https://www.zatons.com/',
         insta: 'https://www.instagram.com/school_helper.zaton/',
@@ -198,6 +204,7 @@ class SpisokOrg extends StatelessWidget {
         adres:
             '678388,  Республика Саха (Якутия), Намский улус, село Аппаны, улица Лена, 22',
         telf: '',
+        call: '',
         email: '',
         wwwad: 'http://hatynchaan.namteh.ru/',
         insta: '',
@@ -213,6 +220,7 @@ class SpisokOrg extends StatelessWidget {
         adres:
             '678388, Республика Саха (Якутия), Намский улус, село Аппаны, улица Лена, 67',
         telf: '8 (41162) 2-33-31, 2-33-41',
+        call: '84116223331',
         email: 'hatyn-aryy@yandex.ru',
         wwwad: 'http://hatynaryy.ucoz.ru/',
         insta: '',
@@ -228,6 +236,7 @@ class SpisokOrg extends StatelessWidget {
         adres:
             '678388, Республика Саха (Якутия), Намский улус, с. Аппаны, ул.Лена, 67',
         telf: '8 (411-62) 23-4-42',
+        call: '84116223442',
         email: 'mdousandaara@yandex.ru',
         wwwad: 'https://mdousandaara.ucoz.ru/',
         insta: '',
@@ -243,6 +252,7 @@ class SpisokOrg extends StatelessWidget {
         adres:
             '678388, Республика Саха (Якутия), Намский улус, с. Аппаны, ул. Лена, 17',
         telf: '8 (41162) 23-2-43',
+        call: '84116223243',
         email: 'hatuntchana@mail.ru',
         wwwad: 'http://hatynchaana.ucoz.net/',
         insta: '',
@@ -258,6 +268,7 @@ class SpisokOrg extends StatelessWidget {
         adres:
             '678388, Республика Саха (Якутия), Намский улус, село Кысыл Деревня, улица им.М.Решетниковой, 8',
         telf: '8 (41162) 2-31-63',
+        call: '84116223163',
         email: 'dsmicheer1990@yandex.ru',
         wwwad:
             'https://yakutia.bebeshka.info/yakutsk/detskiy-sad-micheer-s-kysyl-derevnya-munitsipalnogo-obrazovaniya-namskiy-ulus-respubliki-saha-629832/',
@@ -274,6 +285,7 @@ class SpisokOrg extends StatelessWidget {
         adres:
             '678388, Республика Саха (Якутия), Намский улус, село  Графский Берег, улица Гагарина, 5',
         telf: '8 (41162) 2-32-47',
+        call: '84116223247',
         email: 'romashka.graff@mail.ru',
         wwwad: 'https://romashkagraff.ou14.ru/',
         insta: '',
@@ -289,6 +301,7 @@ class SpisokOrg extends StatelessWidget {
         adres:
             '678388,  Республика Саха (Якутия), Намский улус, село Аппаны, улица Левина, 1/1',
         telf: '',
+        call: '',
         email: '',
         wwwad: 'https://mr-namskij.sakha.gov.ru/filial',
         insta: '',
@@ -341,11 +354,12 @@ class SpisokOrg extends StatelessWidget {
                                 spiskOrg[i].rukov, //3
                                 spiskOrg[i].adres, //4
                                 spiskOrg[i].telf, //5
-                                spiskOrg[i].email, //6
-                                spiskOrg[i].wwwad, //7
-                                spiskOrg[i].insta, //8
-                                spiskOrg[i].youtb, //9
-                                spiskOrg[i].whatsp))); //10
+                                spiskOrg[i].call, //6
+                                spiskOrg[i].email, //7
+                                spiskOrg[i].wwwad, //8
+                                spiskOrg[i].insta, //9
+                                spiskOrg[i].youtb, //10
+                                spiskOrg[i].whatsp))); //11
                   },
                 ),
               ),
