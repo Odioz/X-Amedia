@@ -18,10 +18,11 @@ class OknoOrganiz extends StatefulWidget {
       arg8,
       arg9,
       arg10,
-      arg11;
+      arg11,
+      arg12;
 
   OknoOrganiz(this.arg1, this.arg2, this.arg3, this.arg4, this.arg5, this.arg6,
-      this.arg7, this.arg8, this.arg9, this.arg10, this.arg11);
+      this.arg7, this.arg8, this.arg9, this.arg10, this.arg11, this.arg12);
 
   @override
   _OknoOrganizState createState() => _OknoOrganizState();
@@ -35,7 +36,8 @@ class _OknoOrganizState extends State<OknoOrganiz> {
       vis8 = false,
       vis9 = false,
       vis10 = false,
-      vis11 = false;
+      vis11 = false,
+      vis12 = false;
 
   @override
   Widget build(BuildContext context) {
@@ -62,6 +64,9 @@ class _OknoOrganizState extends State<OknoOrganiz> {
     }
     if (widget.arg11 != '') {
       vis11 = true;
+    }
+    if (widget.arg12 != '') {
+      vis12 = true;
     }
     return Scaffold(
         appBar: AppBar(
@@ -217,6 +222,25 @@ class _OknoOrganizState extends State<OknoOrganiz> {
                                  AndroidIntent intent = AndroidIntent(
                                   action: 'action_view',
                                   data: widget.arg11
+                            );
+                            await intent.launch();
+                          }
+                          },
+                      ),
+                      if (vis12) //плеймаркет
+                      IconButton(
+                        icon: FaIcon(FontAwesomeIcons.googlePlay),
+                        iconSize: 60,
+                        color: Color.fromRGBO(65, 183, 93, 1),
+                        splashRadius: 50,
+                        splashColor: Color.fromRGBO(65, 183, 93, 0.4),
+                        highlightColor: Color.fromRGBO(65, 183, 93, 0.2),
+                        tooltip: "Приложение в GooglePlay",
+                        onPressed: () async {
+                            if (const LocalPlatform().isAndroid) {
+                                 AndroidIntent intent = AndroidIntent(
+                                  action: 'action_view',
+                                  data: widget.arg12
                             );
                             await intent.launch();
                           }

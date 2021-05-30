@@ -2,7 +2,7 @@
     package="ru.testrtp.xamedia">
    <uses-permission android:name="android.permission.INTERNET"/>
    <application
-        android:label="Hatyn-Aryy media"
+        android:label="Хатын-Арыы медиа"
         android:icon="@mipmap/launcher_icon">
         <activity
             android:name=".MainActivity"

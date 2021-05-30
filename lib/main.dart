@@ -111,7 +111,8 @@ class SpisokOrg extends StatelessWidget {
         wwwad: 'https://hatynary.sakha.gov.ru/',
         insta: 'https://www.instagram.com/hatynaryy_sonunnara/',
         youtb: '',
-        whatsp: ''),
+        whatsp: '',
+        playm: ''),
     SpisokOrgan(
         title: 'Хатын-Арынский филиал',
         nazv: 'Намской детской школы искусств',
@@ -127,7 +128,8 @@ class SpisokOrg extends StatelessWidget {
         wwwad: '',
         insta: 'https://www.instagram.com/p/CLTbu_ZLROU/?igshid=1jonwd4bjyuxq',
         youtb: '',
-        whatsp: ''),
+        whatsp: '',
+        playm: ''),
     SpisokOrgan(
         title: '«Сайдыы»',
         nazv: 'Центр досуга с.Кысыл Деревня',
@@ -143,7 +145,8 @@ class SpisokOrg extends StatelessWidget {
         wwwad: 'http://saydyy.ucoz.net/',
         insta: '',
         youtb: 'https://www.youtube.com/channel/UCt95h4mlCzNBXS7N0dRqakg',
-        whatsp: ''),
+        whatsp: '',
+        playm: ''),
     SpisokOrgan(
         title: '«Чороон»',
         nazv: 'Центр народного творчества с.Аппаны',
@@ -160,7 +163,8 @@ class SpisokOrg extends StatelessWidget {
         insta: 'https://www.instagram.com/mbu_snt_choroon/',
         youtb:
             'https://www.youtube.com/channel/UClbSRmh5aiAW0ieme0vKfTg/videos',
-        whatsp: ''),
+        whatsp: '',
+        playm: ''),
     SpisokOrgan(
         title: '«Самородок»',
         nazv: 'Центр досуга с.Графский Берег',
@@ -177,7 +181,8 @@ class SpisokOrg extends StatelessWidget {
             'https://hatynary.sakha.gov.ru/mbu-tsd-samorodok-s-grafskij-bereg',
         insta: 'https://www.instagram.com/p/CLdMiK6Mf5P/?igshid=1m6qgnrw09n8u',
         youtb: 'https://www.youtube.com/channel/UCH4wrtNpxbjpszz2OyuvbNg',
-        whatsp: ''),
+        whatsp: '',
+        playm: ''),
     SpisokOrgan(
         title: 'Затонская школа',
         nazv: 'МКОУ «ЗООШ» с.Графский Берег',
@@ -193,7 +198,8 @@ class SpisokOrg extends StatelessWidget {
         wwwad: 'https://www.zatons.com/',
         insta: 'https://www.instagram.com/school_helper.zaton/',
         youtb: 'https://www.youtube.com/channel/UCxJyU21ZGAzYZbURGsIzgkw',
-        whatsp: ''),
+        whatsp: '',
+        playm: ''),
     SpisokOrgan(
         title: '«Хатынчаан»',
         nazv: 'Звукостудия с.Аппаны',
@@ -209,7 +215,25 @@ class SpisokOrg extends StatelessWidget {
         wwwad: 'http://hatynchaan.namteh.ru/',
         insta: '',
         youtb: 'https://www.youtube.com/channel/UC56Cc_SXucXQl-TmlvgmJiQ',
-        whatsp: 'https://chat.whatsapp.com/LVvXQEKJlUy44tnTPfWkD4'),
+        whatsp: '',
+        playm: ''),
+    SpisokOrgan(
+        title: 'Радио «Энсиэли»',
+        nazv: 'FM 104.3 радиостанция Намского улуса',
+        logo: 'images/logo14.png',
+        poln:
+            'Муниципальное бюджетное учреждение "Радиостанция «Энсиэли» Намского улуса Республики Саха (Якутия)", вещание в УКВ диапазоне на частоте 104,3 МГц, приложение для Android в Google Play: «Радио Саха»',
+        rukov: 'Редактор - Лена',
+        adres:
+            '678388,  Республика Саха (Якутия), Намский улус, село Аппаны, улица Лена, 22',
+        telf: '+7 924 563-76-48',
+        call: '+79245637648',
+        email: '',
+        wwwad: '',
+        insta: '',
+        youtb: '',
+        whatsp: 'https://chat.whatsapp.com/LVvXQEKJlUy44tnTPfWkD4',
+        playm:  'https://play.google.com/store/apps/details?id=ru.testrtp.radiosakha'),    
     SpisokOrgan(
         title: 'Хатын-Арынская школа',
         nazv: 'МБУ «Х-АСОШ им. И.Е. Винокурова» с.Аппаны',
@@ -225,7 +249,8 @@ class SpisokOrg extends StatelessWidget {
         wwwad: 'http://hatynaryy.ucoz.ru/',
         insta: '',
         youtb: '',
-        whatsp: ''),
+        whatsp: '',
+        playm: ''),
     SpisokOrgan(
         title: 'Детсад «Сандаара»',
         nazv: 'МБДОУ Центр развития ребенка №2 с.Аппаны',
@@ -241,7 +266,8 @@ class SpisokOrg extends StatelessWidget {
         wwwad: 'https://mdousandaara.ucoz.ru/',
         insta: '',
         youtb: '',
-        whatsp: ''),
+        whatsp: '',
+        playm: ''),
     SpisokOrgan(
         title: 'Детсад «Хатынчаана»',
         nazv: 'МБДОУ Центр развития ребенка №1 с.Аппаны',
@@ -257,7 +283,8 @@ class SpisokOrg extends StatelessWidget {
         wwwad: 'http://hatynchaana.ucoz.net/',
         insta: '',
         youtb: 'https://www.youtube.com/channel/UCZibX5eWIFWYttNGGGCUKlg',
-        whatsp: ''),
+        whatsp: '',
+        playm: ''),
     SpisokOrgan(
         title: 'Детсад «Мичээр»',
         nazv: 'МКДОУ детский сад с.Кысыл Деревня',
@@ -274,7 +301,8 @@ class SpisokOrg extends StatelessWidget {
             'https://yakutia.bebeshka.info/yakutsk/detskiy-sad-micheer-s-kysyl-derevnya-munitsipalnogo-obrazovaniya-namskiy-ulus-respubliki-saha-629832/',
         insta: '',
         youtb: '',
-        whatsp: ''),
+        whatsp: '',
+        playm: ''),
     SpisokOrgan(
         title: 'Детсад «Ромашка»',
         nazv: 'МБДОУ десткий сад с.Графский Берег',
@@ -290,7 +318,8 @@ class SpisokOrg extends StatelessWidget {
         wwwad: 'https://romashkagraff.ou14.ru/',
         insta: '',
         youtb: '',
-        whatsp: ''),
+        whatsp: '',
+        playm: ''),
     SpisokOrgan(
         title: 'Музей имени И.Е.Винокурова',
         nazv: 'Хатын-Арынский историко-краеведческий музей',
@@ -306,7 +335,8 @@ class SpisokOrg extends StatelessWidget {
         wwwad: 'https://mr-namskij.sakha.gov.ru/filial',
         insta: '',
         youtb: '',
-        whatsp: ''),
+        whatsp: '',
+        playm: ''),
   ];
 
   @override
@@ -359,7 +389,8 @@ class SpisokOrg extends StatelessWidget {
                                 spiskOrg[i].wwwad, //8
                                 spiskOrg[i].insta, //9
                                 spiskOrg[i].youtb, //10
-                                spiskOrg[i].whatsp))); //11
+                                spiskOrg[i].whatsp, //11
+                                spiskOrg[i].playm))); //12
                   },
                 ),
               ),
