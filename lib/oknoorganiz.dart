@@ -70,7 +70,7 @@ class _OknoOrganizState extends State<OknoOrganiz> {
     }
     return Scaffold(
         appBar: AppBar(
-          backgroundColor: Color.fromRGBO(53, 193, 241, 1),
+          backgroundColor: Color.fromRGBO(1, 160, 226, 1),
         ),
         body: SingleChildScrollView(
           child: Center(
@@ -134,20 +134,20 @@ class _OknoOrganizState extends State<OknoOrganiz> {
                       IconButton(
                           icon: Icon(Icons.call),
                           iconSize: 60,
-                          color: Color.fromRGBO(65, 183, 93, 1),
+                          color: Color.fromRGBO(0, 148, 62, 1),
                           splashRadius: 50,
-                          splashColor: Color.fromRGBO(65, 183, 93, 0.4),
-                          highlightColor: Color.fromRGBO(65, 183, 93, 0.2),
+                          splashColor: Color.fromRGBO(0, 148, 62, 0.4),
+                          highlightColor: Color.fromRGBO(0, 148, 62, 0.2),
                           tooltip: "Позвонить",
                           onPressed: () async => await launch("tel:"+widget.arg6) ),
                     if (vis7) //иконка отправ письмо
                       IconButton(
                         icon: Icon(Icons.mail),
                         iconSize: 60,
-                        color: Color.fromRGBO(65, 183, 93, 1),
+                        color: Color.fromRGBO(0, 148, 62, 1),
                         splashRadius: 50,
-                        splashColor: Color.fromRGBO(65, 183, 93, 0.4),
-                        highlightColor: Color.fromRGBO(65, 183, 93, 0.2),
+                        splashColor: Color.fromRGBO(0, 148, 62, 0.4),
+                        highlightColor: Color.fromRGBO(0, 148, 62, 0.2),
                         tooltip: "Написать письмо",
                         onPressed: () async => await launch("mailto:"+widget.arg7),
                       ),
@@ -155,10 +155,10 @@ class _OknoOrganizState extends State<OknoOrganiz> {
                       IconButton(
                         icon: Icon(Icons.open_in_browser),
                         iconSize: 60,
-                        color: Color.fromRGBO(65, 183, 93, 1),
+                        color: Color.fromRGBO(0, 148, 62, 1),
                         splashRadius: 50,
-                        splashColor: Color.fromRGBO(65, 183, 93, 0.4),
-                        highlightColor: Color.fromRGBO(65, 183, 93, 0.2),
+                        splashColor: Color.fromRGBO(0, 148, 62, 0.4),
+                        highlightColor: Color.fromRGBO(0, 148, 62, 0.2),
                         tooltip: "Веб-сайт",
                         onPressed: () async {
                             if (const LocalPlatform().isAndroid) {
@@ -174,10 +174,10 @@ class _OknoOrganizState extends State<OknoOrganiz> {
                       IconButton(
                         icon: FaIcon(FontAwesomeIcons.instagram),
                         iconSize: 60,
-                        color: Color.fromRGBO(65, 183, 93, 1),
+                        color: Color.fromRGBO(0, 148, 62, 1),
                         splashRadius: 50,
-                        splashColor: Color.fromRGBO(65, 183, 93, 0.4),
-                        highlightColor: Color.fromRGBO(65, 183, 93, 0.2),
+                        splashColor: Color.fromRGBO(0, 148, 62, 0.4),
+                        highlightColor: Color.fromRGBO(0, 148, 62, 0.2),
                         tooltip: "Instagram страница",
                         onPressed: () async {
                             if (const LocalPlatform().isAndroid) {
@@ -193,10 +193,10 @@ class _OknoOrganizState extends State<OknoOrganiz> {
                       IconButton(
                         icon: FaIcon(FontAwesomeIcons.youtube),
                         iconSize: 60,
-                        color: Color.fromRGBO(65, 183, 93, 1),
+                        color: Color.fromRGBO(0, 148, 62, 1),
                         splashRadius: 50,
-                        splashColor: Color.fromRGBO(65, 183, 93, 0.4),
-                        highlightColor: Color.fromRGBO(65, 183, 93, 0.2),
+                        splashColor: Color.fromRGBO(0, 148, 62, 0.4),
+                        highlightColor: Color.fromRGBO(0, 148, 62, 0.2),
                         tooltip: "Youtube канал",
                         onPressed: () async {
                             if (const LocalPlatform().isAndroid) {
@@ -212,10 +212,10 @@ class _OknoOrganizState extends State<OknoOrganiz> {
                       IconButton(
                         icon: FaIcon(FontAwesomeIcons.whatsapp),
                         iconSize: 60,
-                        color: Color.fromRGBO(65, 183, 93, 1),
+                        color: Color.fromRGBO(0, 148, 62, 1),
                         splashRadius: 50,
-                        splashColor: Color.fromRGBO(65, 183, 93, 0.4),
-                        highlightColor: Color.fromRGBO(65, 183, 93, 0.2),
+                        splashColor: Color.fromRGBO(0, 148, 62, 0.4),
+                        highlightColor: Color.fromRGBO(0, 148, 62, 0.2),
                         tooltip: "Группа WhatsApp",
                         onPressed: () async {
                             if (const LocalPlatform().isAndroid) {
@@ -231,10 +231,10 @@ class _OknoOrganizState extends State<OknoOrganiz> {
                       IconButton(
                         icon: FaIcon(FontAwesomeIcons.googlePlay),
                         iconSize: 60,
-                        color: Color.fromRGBO(65, 183, 93, 1),
+                        color: Color.fromRGBO(0, 148, 62, 1),
                         splashRadius: 50,
-                        splashColor: Color.fromRGBO(65, 183, 93, 0.4),
-                        highlightColor: Color.fromRGBO(65, 183, 93, 0.2),
+                        splashColor: Color.fromRGBO(0, 148, 62, 0.4),
+                        highlightColor: Color.fromRGBO(0, 148, 62, 0.2),
                         tooltip: "Приложение в GooglePlay",
                         onPressed: () async {
                             if (const LocalPlatform().isAndroid) {

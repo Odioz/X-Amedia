@@ -6,8 +6,8 @@ import 'package:flutter/services.dart';
 void main() {
   SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
     systemNavigationBarColor:
-        Color.fromRGBO(65, 183, 93, 1), // цвет нижей полоски
-    statusBarColor: Color.fromRGBO(53, 193, 241, 1), // цвет строки состояния
+        Color.fromRGBO(0, 148, 62, 1), // цвет нижей полоски
+    statusBarColor: Color.fromRGBO(1, 160, 226, 1), // цвет строки состояния
   ));
   runApp(Xamedia());
 }
@@ -23,7 +23,7 @@ class Xamedia extends StatelessWidget {
           } else {
             print('Run Glavnaya');
             return MaterialApp(
-              theme: ThemeData(fontFamily: 'Pacifico'),
+              theme: ThemeData(fontFamily: 'Comfortaa'),
               home: Glavnaya(),
             );
           }
@@ -66,7 +66,7 @@ class Glavnaya extends StatelessWidget {
         title: Text(
           'Хатын-Арыы медиа',
         ),
-        backgroundColor: Color.fromRGBO(53, 193, 241, 1),
+        backgroundColor: Color.fromRGBO(1, 160, 226, 1),
       ),
       body: Stack(
         children: <Widget>[
@@ -84,7 +84,7 @@ Widget bottomUkrash() {
         child: Align(
       child: ClipPath(
         child: Container(
-          color: Color.fromRGBO(65, 183, 93, 1),
+          color: Color.fromRGBO(0, 148, 62, 1),
           height: 400,
         ),
         clipper: BottomWaveClipper(),
@@ -201,16 +201,16 @@ class SpisokOrg extends StatelessWidget {
         whatsp: '',
         playm: ''),
     SpisokOrgan(
-        title: '«Хатынчаан»',
-        nazv: 'Звукостудия с.Аппаны',
+        title: '«Куйаар ситим туоната»',
+        nazv: 'виртуальная площадка',
         logo: 'images/logo13.png',
         poln:
-            'Муниципальное бюджетное учреждение "Звукостудия «Хатынчаан» с.Аппаны муниципального образования "Хатын-Арынский наслег" Намского улуса Республики Саха (Якутия)"',
-        rukov: 'Директор - Мальцев Гаврил Семенович',
+            'Муниципальное бюджетное учреждение "Звукостудия «Хатынчаан»,  с.Аппаны муниципального образования "Хатын-Арынский наслег" Намского улуса Республики Саха (Якутия)"',
+        rukov: 'Директор - Мальцев Гаврил Семенович,\nCистемный администратор - Захаров Дмитрий Чеевич',
         adres:
             '678388,  Республика Саха (Якутия), Намский улус, село Аппаны, улица Лена, 22',
-        telf: '',
-        call: '',
+        telf: '+7 914 292-47-05',
+        call: '+79142924705',
         email: '',
         wwwad: 'http://hatynchaan.namteh.ru/',
         insta: '',
@@ -222,8 +222,8 @@ class SpisokOrg extends StatelessWidget {
         nazv: 'FM 104.3 радиостанция Намского улуса',
         logo: 'images/logo14.png',
         poln:
-            'Муниципальное бюджетное учреждение "Радиостанция «Энсиэли» Намского улуса Республики Саха (Якутия)", вещание в УКВ диапазоне на частоте 104,3 МГц, приложение для Android в Google Play: «Радио Саха»',
-        rukov: 'Редактор - Лена',
+            'Радиостанция «Энсиэли» Намского улуса Республики Саха (Якутия), вещание в УКВ диапазоне на частоте 104,3 МГц,\nприложение для андроид устройств в "Google Play" «Радио Саха»',
+        rukov: 'Ведущий - Колпашникова Лена Михайловна',
         adres:
             '678388,  Республика Саха (Якутия), Намский улус, село Аппаны, улица Лена, 22',
         telf: '+7 924 563-76-48',
@@ -373,7 +373,7 @@ class SpisokOrg extends StatelessWidget {
                         color: Color.fromRGBO(0, 141, 210, 1),
                       )),
                   trailing: Icon(Icons.keyboard_arrow_right,
-                      color: Color.fromRGBO(65, 183, 93, 1)),
+                      color: Color.fromRGBO(0, 148, 62, 1)),
                   onTap: () {
                     Navigator.push(
                         context,
