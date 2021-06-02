@@ -38,7 +38,7 @@ class Splash extends StatelessWidget {
       body: Center(
         child: Image(
           image: AssetImage("images/appbar.png"),
-          width: MediaQuery.of(context).size.width * 0.4,
+          width: MediaQuery.of(context).size.width * 0.3,
         ),
       ),
     );
@@ -111,7 +111,7 @@ class SpisokOrg extends StatelessWidget {
         wwwad: 'https://hatynary.sakha.gov.ru/',
         insta: 'https://www.instagram.com/hatynaryy_sonunnara/',
         youtb: '',
-        whatsp: '',
+        whatsp: 'https://chat.whatsapp.com/J8HjUdUKGkHB2BOMnHM2FQ',
         playm: ''),
     SpisokOrgan(
         title: 'Хатын-Арынский филиал',
@@ -206,7 +206,8 @@ class SpisokOrg extends StatelessWidget {
         logo: 'images/logo13.png',
         poln:
             'Муниципальное бюджетное учреждение "Звукостудия «Хатынчаан»,  с.Аппаны муниципального образования "Хатын-Арынский наслег" Намского улуса Республики Саха (Якутия)"',
-        rukov: 'Директор - Мальцев Гаврил Семенович,\nCистемный администратор - Захаров Дмитрий Чеевич',
+        rukov:
+            'Директор - Мальцев Гаврил Семенович,\nCистемный администратор - Захаров Дмитрий Петрович',
         adres:
             '678388,  Республика Саха (Якутия), Намский улус, село Аппаны, улица Лена, 22',
         telf: '+7 914 292-47-05',
@@ -233,7 +234,8 @@ class SpisokOrg extends StatelessWidget {
         insta: '',
         youtb: '',
         whatsp: 'https://chat.whatsapp.com/LVvXQEKJlUy44tnTPfWkD4',
-        playm:  'https://play.google.com/store/apps/details?id=ru.testrtp.radiosakha'),    
+        playm:
+            'https://play.google.com/store/apps/details?id=ru.testrtp.radiosakha'),
     SpisokOrgan(
         title: 'Хатын-Арынская школа',
         nazv: 'МБУ «Х-АСОШ им. И.Е. Винокурова» с.Аппаны',
@@ -305,7 +307,7 @@ class SpisokOrg extends StatelessWidget {
         playm: ''),
     SpisokOrgan(
         title: 'Детсад «Ромашка»',
-        nazv: 'МБДОУ десткий сад с.Графский Берег',
+        nazv: 'МБДОУ детский сад с.Графский Берег',
         logo: 'images/logo11.png',
         poln:
             'Муниципальное бюджетное дошкольное образовательное учреждение "детский сад «Ромашка» с. Графский Берег  муниципального образования "Намский улус" Республики Саха (Якутия)"',
@@ -321,18 +323,18 @@ class SpisokOrg extends StatelessWidget {
         whatsp: '',
         playm: ''),
     SpisokOrgan(
-        title: 'Музей имени И.Е.Винокурова',
-        nazv: 'Хатын-Арынский историко-краеведческий музей',
+        title: 'Хатын-Арынский историко-краеведческий музей',
+        nazv: 'имени Ильи Егоровича Винокурова',
         logo: 'images/logo12.png',
         poln:
             'Хатын-Арынский историко-краеведческий музей имени Ильи Егоровича Винокурова (филиал Намского историко-этнографического музея им. П.И.Сивцева)',
-        rukov: '',
+        rukov: 'Заведующий - Христофоров Афанасий Христофорович',
         adres:
             '678388,  Республика Саха (Якутия), Намский улус, село Аппаны, улица Левина, 1/1',
-        telf: '',
-        call: '',
+        telf: '8 (41162) 23-447',
+        call: '84116223447',
         email: '',
-        wwwad: 'https://mr-namskij.sakha.gov.ru/filial',
+        wwwad: 'https://virtualyakutia.ru/old/tours/museumappani/museum.html',
         insta: '',
         youtb: '',
         whatsp: '',
