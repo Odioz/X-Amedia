@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'oknoorganiz.dart';
 import 'spisokorgan.dart';
 import 'package:flutter/services.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import 'package:http/http.dart' as http;
+import 'dart:convert';
 
 void main() {
   SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
@@ -12,6 +15,8 @@ void main() {
   runApp(Xamedia());
 }
 
+SharedPreferences prefs;
+
 class Xamedia extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -21,7 +26,6 @@ class Xamedia extends StatelessWidget {
           if (snapshot.connectionState == ConnectionState.waiting) {
             return MaterialApp(home: Splash());
           } else {
-            print('Run Glavnaya');
             return MaterialApp(
               theme: ThemeData(fontFamily: 'Comfortaa'),
               home: Glavnaya(),
@@ -31,7 +35,44 @@ class Xamedia extends StatelessWidget {
   }
 }
 
-class Splash extends StatelessWidget {
+class Splash extends StatefulWidget {
+  @override
+  _SplashState createState() => _SplashState();
+}
+
+class _SplashState extends State<Splash> {
+  bool shouldProceed = false;
+
+  _fetch_prefs() async {
+    prefs = await SharedPreferences.getInstance();
+
+    if (prefs.containsKey("instagr1")) {
+      print("init");
+      int in1 = prefs.getInt("instagr1");
+      int in2 = prefs.getInt("instagr2");
+      int in3 = prefs.getInt("instagr3");
+      int in4 = prefs.getInt("instagr4");
+      int in5 = prefs.getInt("instagr5");
+      int in6 = prefs.getInt("instagr6");
+      int yt3 = prefs.getInt("youtub3");
+      int yt4 = prefs.getInt("youtub4");
+      int yt5 = prefs.getInt("youtub5");
+      int yt6 = prefs.getInt("youtub6");
+    } else {
+      print("loadPost");
+      //  instaPost('insUrl');
+    }
+    setState(() {
+      shouldProceed = true;
+    });
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    _fetch_prefs();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -126,7 +167,7 @@ class SpisokOrg extends StatelessWidget {
         call: '84116223435',
         email: 'appany.dshi@mail.ru',
         wwwad: '',
-        insta: 'https://www.instagram.com/p/CLTbu_ZLROU/?igshid=1jonwd4bjyuxq',
+        insta: 'https://www.instagram.com/dshi_2020/',
         youtb: '',
         whatsp: '',
         playm: ''),
@@ -143,7 +184,7 @@ class SpisokOrg extends StatelessWidget {
         call: '84116223095',
         email: '',
         wwwad: 'http://saydyy.ucoz.net/',
-        insta: '',
+        insta: 'https://www.instagram.com/saiduu_kysyl/',
         youtb: 'https://www.youtube.com/channel/UCt95h4mlCzNBXS7N0dRqakg',
         whatsp: '',
         playm: ''),
@@ -161,8 +202,7 @@ class SpisokOrg extends StatelessWidget {
         email: '',
         wwwad: 'https://choron.ucoz.net/',
         insta: 'https://www.instagram.com/mbu_snt_choroon/',
-        youtb:
-            'https://www.youtube.com/channel/UClbSRmh5aiAW0ieme0vKfTg/videos',
+        youtb: 'https://www.youtube.com/channel/UClbSRmh5aiAW0ieme0vKfTg',
         whatsp: '',
         playm: ''),
     SpisokOrgan(
@@ -179,7 +219,7 @@ class SpisokOrg extends StatelessWidget {
         email: '',
         wwwad:
             'https://hatynary.sakha.gov.ru/mbu-tsd-samorodok-s-grafskij-bereg',
-        insta: 'https://www.instagram.com/p/CLdMiK6Mf5P/?igshid=1m6qgnrw09n8u',
+        insta: 'https://www.instagram.com/mbu_samorodok/',
         youtb: 'https://www.youtube.com/channel/UCH4wrtNpxbjpszz2OyuvbNg',
         whatsp: '',
         playm: ''),
@@ -198,6 +238,23 @@ class SpisokOrg extends StatelessWidget {
         wwwad: 'https://www.zatons.com/',
         insta: 'https://www.instagram.com/school_helper.zaton/',
         youtb: 'https://www.youtube.com/channel/UCxJyU21ZGAzYZbURGsIzgkw',
+        whatsp: '',
+        playm: ''),
+    SpisokOrgan(
+        title: 'Детсад «Хатынчаана»',
+        nazv: 'МБДОУ Центр развития ребенка №1 с.Аппаны',
+        logo: 'images/logo09.png',
+        poln:
+            'Муниципальное бюджетное дошкольное образовательное учреждение "Центр развития ребёнка - детский сад №1 «Хатынчаана» с.Аппаны муниципального образования "Намский улус" Республики Саха (Якутия)"',
+        rukov: 'Заведующая - Афанасьева Александра Геннадьевна',
+        adres:
+            '678388, Республика Саха (Якутия), Намский улус, с. Аппаны, ул. Лена, 17',
+        telf: '8 (41162) 23-2-43',
+        call: '84116223243',
+        email: 'hatuntchana@mail.ru',
+        wwwad: 'http://hatynchaana.ucoz.net/',
+        insta: '',
+        youtb: 'https://www.youtube.com/channel/UCZibX5eWIFWYttNGGGCUKlg',
         whatsp: '',
         playm: ''),
     SpisokOrgan(
@@ -268,23 +325,6 @@ class SpisokOrg extends StatelessWidget {
         wwwad: 'https://mdousandaara.ucoz.ru/',
         insta: '',
         youtb: '',
-        whatsp: '',
-        playm: ''),
-    SpisokOrgan(
-        title: 'Детсад «Хатынчаана»',
-        nazv: 'МБДОУ Центр развития ребенка №1 с.Аппаны',
-        logo: 'images/logo09.png',
-        poln:
-            'Муниципальное бюджетное дошкольное образовательное учреждение "Центр развития ребёнка - детский сад №1 «Хатынчаана» с.Аппаны муниципального образования "Намский улус" Республики Саха (Якутия)"',
-        rukov: 'Заведующая - Афанасьева Александра Геннадьевна',
-        adres:
-            '678388, Республика Саха (Якутия), Намский улус, с. Аппаны, ул. Лена, 17',
-        telf: '8 (41162) 23-2-43',
-        call: '84116223243',
-        email: 'hatuntchana@mail.ru',
-        wwwad: 'http://hatynchaana.ucoz.net/',
-        insta: '',
-        youtb: 'https://www.youtube.com/channel/UCZibX5eWIFWYttNGGGCUKlg',
         whatsp: '',
         playm: ''),
     SpisokOrgan(
@@ -401,6 +441,19 @@ class SpisokOrg extends StatelessWidget {
         ),
       ),
     );
+  }
+}
+
+instaPost(String insUrl) async {
+  var response = await http.get('https://instagram.com/' + insUrl + '/?__a=1');
+
+  if (response.statusCode == 200) {
+    var responseBody = json.decode(response.body);
+
+    return responseBody['graphql']['user']['edge_owner_to_timeline_media']
+        ['count'];
+  } else {
+    throw Exception('Failed to Load Data');
   }
 }
 

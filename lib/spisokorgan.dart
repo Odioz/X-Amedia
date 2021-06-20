@@ -13,6 +13,7 @@ class SpisokOrgan {
   String youtb;
   String whatsp;
   String playm;
+  int newpost;
 
   SpisokOrgan(
       {this.title,
@@ -28,5 +29,6 @@ class SpisokOrgan {
       this.insta,
       this.youtb,
       this.whatsp,
-      this.playm});
+      this.playm,
+      this.newpost});
 }
