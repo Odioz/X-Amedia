@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:xamedia/globalvar.dart';
 import 'oknoorganiz.dart';
 import 'spisokorgan.dart';
+//import 'sharedprefutil.dart';
+//import 'instayoutubeposts.dart';
 import 'package:flutter/services.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:http/http.dart' as http;
-import 'dart:convert';
 
 void main() {
   SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
@@ -24,11 +25,11 @@ class Xamedia extends StatelessWidget {
         future: Future.delayed(Duration(seconds: 3)),
         builder: (context, AsyncSnapshot snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {
-            return MaterialApp(home: Splash());
+            return MaterialApp(home: Splash()); //сплэш экран - заставка
           } else {
             return MaterialApp(
-              theme: ThemeData(fontFamily: 'Comfortaa'),
-              home: Glavnaya(),
+              theme: ThemeData(fontFamily: 'Comfortaa'), //глобальный шрифт
+              home: Glavnaya(), //главное окно
             );
           }
         });
@@ -43,24 +44,52 @@ class Splash extends StatefulWidget {
 class _SplashState extends State<Splash> {
   bool shouldProceed = false;
 
-  _fetch_prefs() async {
+  fetchPrefs() async {
+    //setGlobalvar();
+    //загрузка сохраненн значений инсты и ютуб
     prefs = await SharedPreferences.getInstance();
 
-    if (prefs.containsKey("instagr1")) {
-      print("init");
-      int in1 = prefs.getInt("instagr1");
-      int in2 = prefs.getInt("instagr2");
-      int in3 = prefs.getInt("instagr3");
-      int in4 = prefs.getInt("instagr4");
-      int in5 = prefs.getInt("instagr5");
-      int in6 = prefs.getInt("instagr6");
-      int yt3 = prefs.getInt("youtub3");
-      int yt4 = prefs.getInt("youtub4");
-      int yt5 = prefs.getInt("youtub5");
-      int yt6 = prefs.getInt("youtub6");
+    if (prefs.containsKey("instagr6") & prefs.containsKey("youtub8")) {
+      // String in1 = SharedPrefUtils.readPrefStr("instagr1")as String;
+      // String in2 = SharedPrefUtils.readPrefStr("instagr2") as String;
+      // String in3 = SharedPrefUtils.readPrefStr("instagr3") as String;
+      // String in4 = SharedPrefUtils.readPrefStr("instagr4") as String;
+      // String in5 = SharedPrefUtils.readPrefStr("instagr5") as String;
+      // String in6 = SharedPrefUtils.readPrefStr("instagr6") as String;
+      // String yt3 = SharedPrefUtils.readPrefStr("youtub3") as String;
+      // String yt4 = SharedPrefUtils.readPrefStr("youtub4") as String;
+      // String yt5 = SharedPrefUtils.readPrefStr("youtub5") as String;
+      // String yt6 = SharedPrefUtils.readPrefStr("youtub6") as String;
+      // String yt7 = SharedPrefUtils.readPrefStr("youtub7") as String;
+      // String yt8 = SharedPrefUtils.readPrefStr("youtub8") as String;
     } else {
-      print("loadPost");
-      //  instaPost('insUrl');
+      //print("loadPost");
+      //prefs.setString("instagr1",
+      //Globalvar.insta1 = InstaYoutubePosts().instaPost('hatynaryy_sonunnara') as String;
+      prefs.setString("instagr1", Globalvar.insta1);
+      //Globalvar.insta2 = InstaYoutubePosts().instaPost('dshi_2020') as String;
+      prefs.setString("instagr2", Globalvar.insta2);
+      //Globalvar.insta3 = InstaYoutubePosts().instaPost('saiduu_kysyl') as String;
+      prefs.setString("instagr3", Globalvar.insta3);
+      //Globalvar.insta4 = InstaYoutubePosts().instaPost('mbu_samorodok') as String;
+      prefs.setString("instagr4", Globalvar.insta4);
+      //Globalvar.insta5 = InstaYoutubePosts().instaPost('mbu_snt_choroon') as String;
+      prefs.setString("instagr5", Globalvar.insta5);
+      //Globalvar.insta6 = InstaYoutubePosts().instaPost('school_helper.zaton') as String;
+      prefs.setString("instagr6", Globalvar.insta6);
+      //Globalvar.youtb3 = InstaYoutubePosts().youtbPost('UCt95h4mlCzNBXS7N0dRqakg') as String;
+      prefs.setString("youtub3", Globalvar.youtb3);
+      //Globalvar.youtb4 = InstaYoutubePosts().youtbPost('UClbSRmh5aiAW0ieme0vKfTg') as String;
+      prefs.setString("youtub4", Globalvar.youtb4);
+      //Globalvar.youtb5 = InstaYoutubePosts().youtbPost('UCH4wrtNpxbjpszz2OyuvbNg') as String;
+      prefs.setString("youtub5", Globalvar.youtb5);
+      //Globalvar.youtb6 = InstaYoutubePosts().youtbPost('UCxJyU21ZGAzYZbURGsIzgkw') as String;
+      prefs.setString("youtub6", Globalvar.youtb6);
+      //Globalvar.youtb7 = InstaYoutubePosts().youtbPost('UCZibX5eWIFWYttNGGGCUKlg') as String;
+      prefs.setString("youtub7", Globalvar.youtb7);
+      //Globalvar.youtb8 = InstaYoutubePosts().youtbPost('UC56Cc_SXucXQl-TmlvgmJiQ') as String;
+      prefs.setString("youtub8", Globalvar.youtb8);
+      //print("loadPost done");
     }
     setState(() {
       shouldProceed = true;
@@ -70,7 +99,7 @@ class _SplashState extends State<Splash> {
   @override
   void initState() {
     super.initState();
-    _fetch_prefs();
+  //  fetchPrefs();
   }
 
   @override
@@ -153,6 +182,7 @@ class SpisokOrg extends StatelessWidget {
         insta: 'https://www.instagram.com/hatynaryy_sonunnara/',
         youtb: '',
         whatsp: 'https://chat.whatsapp.com/J8HjUdUKGkHB2BOMnHM2FQ',
+        newpost: Globalvar.insta1,
         playm: ''),
     SpisokOrgan(
         title: 'Хатын-Арынский филиал',
@@ -170,6 +200,7 @@ class SpisokOrg extends StatelessWidget {
         insta: 'https://www.instagram.com/dshi_2020/',
         youtb: '',
         whatsp: '',
+        newpost: Globalvar.insta2,
         playm: ''),
     SpisokOrgan(
         title: '«Сайдыы»',
@@ -187,6 +218,7 @@ class SpisokOrg extends StatelessWidget {
         insta: 'https://www.instagram.com/saiduu_kysyl/',
         youtb: 'https://www.youtube.com/channel/UCt95h4mlCzNBXS7N0dRqakg',
         whatsp: '',
+        newpost: Globalvar.insta3,
         playm: ''),
     SpisokOrgan(
         title: '«Чороон»',
@@ -204,6 +236,7 @@ class SpisokOrg extends StatelessWidget {
         insta: 'https://www.instagram.com/mbu_snt_choroon/',
         youtb: 'https://www.youtube.com/channel/UClbSRmh5aiAW0ieme0vKfTg',
         whatsp: '',
+        newpost: Globalvar.insta4,
         playm: ''),
     SpisokOrgan(
         title: '«Самородок»',
@@ -222,6 +255,7 @@ class SpisokOrg extends StatelessWidget {
         insta: 'https://www.instagram.com/mbu_samorodok/',
         youtb: 'https://www.youtube.com/channel/UCH4wrtNpxbjpszz2OyuvbNg',
         whatsp: '',
+        newpost: Globalvar.insta5,
         playm: ''),
     SpisokOrgan(
         title: 'Затонская школа',
@@ -239,6 +273,7 @@ class SpisokOrg extends StatelessWidget {
         insta: 'https://www.instagram.com/school_helper.zaton/',
         youtb: 'https://www.youtube.com/channel/UCxJyU21ZGAzYZbURGsIzgkw',
         whatsp: '',
+        newpost: Globalvar.insta6,
         playm: ''),
     SpisokOrgan(
         title: 'Детсад «Хатынчаана»',
@@ -256,6 +291,7 @@ class SpisokOrg extends StatelessWidget {
         insta: '',
         youtb: 'https://www.youtube.com/channel/UCZibX5eWIFWYttNGGGCUKlg',
         whatsp: '',
+        newpost:'',
         playm: ''),
     SpisokOrgan(
         title: '«Куйаар ситим туоната»',
@@ -274,6 +310,7 @@ class SpisokOrg extends StatelessWidget {
         insta: '',
         youtb: 'https://www.youtube.com/channel/UC56Cc_SXucXQl-TmlvgmJiQ',
         whatsp: '',
+        newpost:'',
         playm: ''),
     SpisokOrgan(
         title: 'Радио «Энсиэли»',
@@ -290,6 +327,7 @@ class SpisokOrg extends StatelessWidget {
         wwwad: '',
         insta: '',
         youtb: '',
+        newpost:'',
         whatsp: 'https://chat.whatsapp.com/LVvXQEKJlUy44tnTPfWkD4',
         playm:
             'https://play.google.com/store/apps/details?id=ru.testrtp.radiosakha'),
@@ -309,6 +347,7 @@ class SpisokOrg extends StatelessWidget {
         insta: '',
         youtb: '',
         whatsp: '',
+        newpost:'',
         playm: ''),
     SpisokOrgan(
         title: 'Детсад «Сандаара»',
@@ -326,6 +365,7 @@ class SpisokOrg extends StatelessWidget {
         insta: '',
         youtb: '',
         whatsp: '',
+        newpost:'',
         playm: ''),
     SpisokOrgan(
         title: 'Детсад «Мичээр»',
@@ -344,6 +384,7 @@ class SpisokOrg extends StatelessWidget {
         insta: '',
         youtb: '',
         whatsp: '',
+        newpost:'',
         playm: ''),
     SpisokOrgan(
         title: 'Детсад «Ромашка»',
@@ -361,6 +402,7 @@ class SpisokOrg extends StatelessWidget {
         insta: '',
         youtb: '',
         whatsp: '',
+        newpost:'',
         playm: ''),
     SpisokOrgan(
         title: 'Хатын-Арынский историко-краеведческий музей',
@@ -378,6 +420,7 @@ class SpisokOrg extends StatelessWidget {
         insta: '',
         youtb: '',
         whatsp: '',
+        newpost:'',
         playm: ''),
   ];
 
@@ -444,18 +487,11 @@ class SpisokOrg extends StatelessWidget {
   }
 }
 
-instaPost(String insUrl) async {
-  var response = await http.get('https://instagram.com/' + insUrl + '/?__a=1');
+setGlobalvar() {
 
-  if (response.statusCode == 200) {
-    var responseBody = json.decode(response.body);
-
-    return responseBody['graphql']['user']['edge_owner_to_timeline_media']
-        ['count'];
-  } else {
-    throw Exception('Failed to Load Data');
-  }
 }
+
+
 
 class BottomWaveClipper extends CustomClipper<Path> {
   @override

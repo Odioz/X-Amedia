@@ -13,7 +13,7 @@ class SpisokOrgan {
   String youtb;
   String whatsp;
   String playm;
-  int newpost;
+  String newpost;
 
   SpisokOrgan(
       {this.title,
